@@ -8,7 +8,7 @@ for j in range(10):
     print()
 print()
 print("Nr2\n")
-for j in range(1,4):
+for j in range(1,5):
     for i in range(2):
         print("*" * j * 2)
 print()
