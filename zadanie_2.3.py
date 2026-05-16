@@ -6,7 +6,11 @@
 name_list = ["John","Michael","Terry","Eric","Graham"]
 name_dictionary = {}
 for item in name_list:
-    name_dictionary[item] = {item:len(item)}
+    # name_dictionary[item] = {item:len(item)}
+    # tutaj miałem problem bo nieco dziwna dla mnie jest iteracja po obiektach
+    name_dictionary[item] = len(item)     
+
+
 print (name_dictionary)
 
 # Zadanie 2
