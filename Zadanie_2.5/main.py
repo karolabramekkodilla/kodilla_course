@@ -2,17 +2,30 @@
 # Użyj listy składanej, aby stworzyć listę sześcianów (potęgi trzeciej) liczb z zakresu od 1 do 10. 
 # Następnie użyj pętli for in, aby zwrócić w konsoli liczby niepodzielne przez 2.
 
-ten_list = [i**3 for i in range(1,11) if i % 2 != 0]
-print(ten_list)
+# ten_list = [i**3 for i in range(1,11) if i % 2 != 0]
+# print(ten_list)
+
+# Poprawka zadania 1
+# Chyba uznałem że lepiej sprawdzić warunek parzystości dla i(mniej obliczeń) już w liście składanej 
+# i ciekawe był zapis tego w jednej linii
+ten_list = [i**3 for i in range(1, 11)]
+for number in ten_list:
+    if number % 2 != 0:
+        print(number)
+
 
 # Zadanie 2
 # Dana jest lista: [2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 3, 0, 0]. Zadeklaruj ją w Pythonie, a następnie użyj slicingu, 
 # by otrzymać listę, która zawiera tylko zera z tej kolekcji. Potem użyj tej samej techniki do zwrócenia listy, 
 # która zawiera wszystkie inne liczby tylko nie zera z tej kolekcji.
 
+
+# Poprawka zadania 2
+# Tutaj potraktowałem to jako ćwiczenie różnych opcji, natomiast korzystanie z ujemnych indeksów raczej mało praktyczne, 
+# aczkolwiek pewnie czasami może się przydać
 task_list = [2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 3, 0, 0]
-zeros_list = task_list[1:4]+task_list[5:10]+task_list[-2:]
-non_zero_list = task_list[0:1]+task_list[4:5]+task_list[-4:-2]
+zeros_list = task_list[1:4]+task_list[5:10]+task_list[12:14]
+non_zero_list = task_list[0:1]+task_list[4:5]+task_list[10:12]
 # Całkiem spoko ćwiczenie bo wyszły tutaj problemy z ostatnim elementem listy, z tym jak działa slicing przy ujemnym indeksowaniu,
 #  i co właściwie zwraca np. task_list[0] :)
 print(zeros_list)
